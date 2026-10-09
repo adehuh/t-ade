@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Question 3</title>
+  <style>
+    body { margin: 0; color: #202020; background: #fafafa; font: 16px/1.6 system-ui, sans-serif; }
+    main { max-width: 960px; margin: auto; padding: 32px 20px; }
+    h1 { font-size: 1.7rem; }
+    h2 { margin-bottom: 4px; font-size: 1.2rem; }
+    p { margin-top: 0; color: #555; }
+    section { margin-top: 32px; }
+    .results { padding: 16px; background: #f4f4f4; }
+    table { width: 100%; border-collapse: collapse; table-layout: fixed; }
+    th { padding: 0 0 12px; text-align: left; font-size: 12px; font-weight: 600; color: #555; }
+    th:first-child { width: 56px; }
+    td { padding: 3px 0; vertical-align: top; }
+    .depth { color: #666; font: 14px/1.6 monospace; }
+    code { display: block; font: 14px/1.6 monospace; color: #555; overflow-wrap: anywhere; }
+    .folder { font-weight: 700; color: #202020; }
+    @media (max-width: 480px) {
+      main { padding: 24px 12px; }
+      .results { padding: 12px; }
+      th:first-child { width: 44px; }
+    }
+  </style>
+  <script src="q3.js" defer></script>
+  <script src="q3-page.js" defer></script>
+</head>
+<body>
+  <main>
+    <h1>Folder traversal</h1>
+    <p>Files and folders from Appendix A. Depth starts at 0 for the top-level folders.</p>
+    <section aria-labelledby="dfs-title">
+      <h2 id="dfs-title">Depth-first</h2>
+      <p>Visit each folder, then its contents, before moving to its next sibling.</p>
+      <div class="results">
+        <table aria-labelledby="dfs-title">
+          <thead>
+            <tr>
+              <th scope="col">Depth</th>
+              <th scope="col">File / folder</th>
+            </tr>
+          </thead>
+          <tbody id="dfs"></tbody>
+        </table>
+      </div>
+    </section>
+    <section aria-labelledby="bfs-title">
+      <h2 id="bfs-title">Breadth-first</h2>
+      <p>Visit every item at the current depth before the next level. Hover over a name to see its full path.</p>
+      <div class="results">
+        <table aria-labelledby="bfs-title">
+          <thead>
+            <tr>
+              <th scope="col">Depth</th>
+              <th scope="col">File / folder</th>
+            </tr>
+          </thead>
+          <tbody id="bfs"></tbody>
+        </table>
+      </div>
+    </section>
+    <noscript>Enable JavaScript</noscript>
+  </main>
+</body>
+</html>
