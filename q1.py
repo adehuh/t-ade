@@ -9,7 +9,7 @@ def draw_circle(radius: int = 19, thickness: int = 3, is_trace: bool = False) ->
     squares = [x * x for x in range(-radius - 1, radius + 2)]
     rows = []
 
-    if(is_trace)
+    if(is_trace):
         print("[TRACE] input range:")
         input_range = range(-radius - 1, radius + 2)
         print(input_range)
