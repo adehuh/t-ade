@@ -1,4 +1,5 @@
 ## 1
+python3 q1.py --trace
 python3 q1.py
 
 ## 2
