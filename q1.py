@@ -39,5 +39,6 @@ def draw_circle(radius: int = 19, thickness: int = 3, is_trace: bool = False) ->
 if __name__ == "__main__":
     radius = 19
     thickness = 3
+    is_trace = "--trace" in sys.argv[1:]
 
-    print(draw_circle(radius, thickness))
+    print(draw_circle(radius, thickness, is_trace))
