@@ -23,9 +23,8 @@ def draw_circle(radius: int = 19, thickness: int = 3, is_trace: bool = False) ->
                 f"{x_squared + y_squared:3}" 
                 for x_squared in squares
             ))
-            str= "\n".join(rowsDebug)
-            print(str)
-            print()
+        print("\n".join(rowsDebug))
+        print()
     
     for y_squared in squares:
         rows.append("".join(
